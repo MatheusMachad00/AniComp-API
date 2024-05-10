@@ -29,10 +29,10 @@ model Anime {
   id             Int    @id @default(autoincrement())
   name           String @db.VarChar(300)
   weekday        String @db.VarChar(20)
-  currentEpisode Int
-  totalEpisodes  Int
+  currentEpisode Int    @default(0)
+  totalEpisodes  Int    @default(0)
   releaseDate    String @db.VarChar(10)
-  status         Int    @default(0)
+  status         String @db.VarChar(20)
   userId         Int
   user           User   @relation(fields: [userId], references: [id])
 

@@ -11,4 +11,9 @@ router.post(
   animeController.createNewAnime
 );
 
+router.post(
+  "/updateCurrentEpisode",
+  animeController.updateCurrentEpisode
+);
+
 export default router;
